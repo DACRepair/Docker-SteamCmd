@@ -3,7 +3,7 @@ FROM debian:latest
 RUN mkdir /app
 WORKDIR /app
 
-RUN apt-get update && apt-get -y install \
+RUN apt-get -qq update && apt-get -qq -y install \
     curl \
 	lib32gcc1 \
 	&& rm -rf /var/lib/apt/lists/*
